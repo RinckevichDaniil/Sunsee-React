@@ -1,0 +1,37 @@
+@import './elements.scss';
+
+.footer {
+    background-color: $primary-color;
+    width: 100vw;
+}
+
+.footer__wrapp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 26px;
+    margin-bottom: 28px;
+    @include mobile {
+        margin-top: 32px;
+        margin-bottom: 31.7px;
+    }
+    @include tablet {
+        margin-top: 42px;
+        margin-bottom: 41.5px;
+    }
+    @include desktop {
+        margin-top: 50px;
+        margin-bottom: 49px;
+    }
+}
+
+.footer__logo {
+    width: 80px;
+    height: 73px;
+    margin-bottom: 10px;
+    background-image: url('../images/Logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60px 58px;
+}

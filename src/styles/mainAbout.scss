@@ -1,0 +1,134 @@
+@import './elements.scss';
+
+
+.about-section {
+    position: relative;
+    background-color: $primary-color;
+    z-index: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-section__wrapp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include mobile {
+        width: 600px;
+    }
+    @include tablet {
+        width: 1024px;
+        align-items: flex-start;
+    }
+    margin-bottom: 75px;
+    margin-left: 18px;
+    margin-right: 21px;
+    @include desktop {
+        margin-right: 200px;
+        margin-left: 200px;
+        margin-bottom: 200px;
+    }
+}
+
+.about-section__title {
+    margin: 0;
+    margin-top: 54px;
+    margin-bottom: 30px;
+    font-size: 36px;
+    align-self: flex-start;
+    word-wrap: break-word;
+    position: relative;
+    z-index: 11;
+    @include mobile {
+        font-size: 60px;
+    }
+    @include tablet {
+        font-size: 90px;
+        margin-top: 105px;
+        margin-bottom: 100px;
+    }
+    @include desktop {
+        font-size: 110px;
+        margin-bottom: 150px;
+        margin-top: 187px;
+    }
+}
+
+.content-wrapp {
+    position: relative;
+    z-index: 1;
+    @include mobile {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+.video {
+    margin-bottom: 30px;
+    width: 297px;
+    height: 495px;
+    z-index: 0;
+    @include mobile {
+        width: 280px;
+        height: 467px;
+    }
+    @include tablet {
+        width: 446px;
+        height: 745px;
+        position: absolute;
+        bottom: -31px;
+        left: 520px;
+    }
+    @include desktop {
+        width: 560px;
+        height: 935px;
+        left: 560px;
+        bottom: -92px;
+    }
+}
+
+.content-wrapp--row {
+    align-self: flex-start;
+    justify-self: flex-start;
+}
+
+.content__text {
+    margin-top: 0;
+    margin-bottom: 50px;
+    width: 100%;
+    @include mobile {
+        margin-right: 39px;
+        font-size: 15px;
+        width: calc(100% - 18px);
+    }
+    @include tablet {
+        font-size: 16px;
+        margin-bottom: 60px;
+        width: calc(50% - 34px);
+    }
+    @include desktop {
+        margin-bottom: 80px;
+        width: calc(50% - 120px);
+    }
+}
+
+.contacts-wrapp {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 18px;
+    .title--caps {
+        margin: 0;
+        margin-right: 20px;
+    }
+    .text--main {
+        margin: 0;
+        opacity: 0.5;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

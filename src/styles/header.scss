@@ -1,0 +1,107 @@
+@import "./elements.scss";
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  @include mobile {
+    margin-bottom: 70px;
+  }
+  @include tablet {
+    margin-bottom: 93px;
+  }
+  @include desktop {
+    margin-bottom: 100px;
+  }
+  .header__logo {
+    font-family: CormorantLight;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 132.5%;
+    letter-spacing: 0.04em;
+    color: $primary-color;
+    text-decoration: none;
+  }
+  .header__menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .header__select {
+      background-color: transparent;
+      margin-right: 25px;
+      width: 44px;
+      height: 32px;
+      text-align: center;
+      &:hover {
+        color: $secondary-color;
+        background-color: $primary-color;
+        text-decoration: none;
+      }
+    }
+    .login-open {
+      background: none;
+      border: none;
+    }
+    .header__login_mobile {
+      display: block;
+      margin-right: 40px;
+      @include mobile {
+        display: none;
+      }
+      .login-open--mobile {
+        background-image: url("../images/login.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 14px;
+        height: 15px;
+      }
+    }
+    .header__login_display {
+      display: none;
+      margin-right: 40px;
+      @include mobile {
+        display: block;
+      }
+    }
+    .header__bag_mobile {
+      display: block;
+      position: relative;
+      .header-quantity__wrapp {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        color: $secondary-color;
+        background-color: $primary-color;
+        border-radius: 60%;
+        bottom: 20px;
+        left: 11px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .header__quantity {
+          font-family: NunitoLight;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 7px;
+          line-height: 9px;
+          letter-spacing: 0.02em;
+          width: 4px;
+        }
+      }
+      @include mobile {
+        display: none;
+      }
+    }
+    .header__bag_display {
+      display: none;
+      @include mobile {
+        display: block;
+      }
+    }
+  }
+}

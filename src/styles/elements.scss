@@ -1,0 +1,227 @@
+@import './fonts.scss';
+$primary-color: #030303;
+$secondary-color: #FDFDFD;
+@mixin mobile {
+    @media screen and (min-width: 640px) {
+        @content
+    }
+};
+
+@mixin tablet {
+    @media screen and (min-width: 1024px) {
+        @content
+    }
+};
+
+@mixin desktop {
+    @media screen and (min-width: 1440px) {
+        @content
+    }
+};
+
+
+.big_title {
+    font-family: CormorantRegular;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 116.5%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $secondary-color;
+}
+
+.description__title {
+    font-family: CormorantRegular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 126.4%;
+    color: $primary-color;
+}
+
+.item__name {
+    font-family: CormorantMedium;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 80.5%;
+    letter-spacing: 0.05em;
+    color: $primary-color;
+}
+
+.item__price {
+    font-family: NunitoRegular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 133%;
+    letter-spacing: 0.1em;
+    color: $primary-color;
+}
+
+.title--caps {
+    font-family: CormorantRegular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 80.5%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $secondary-color;
+}
+
+.btn {
+    font-family: NunitoRegular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $secondary-color;
+    border: none;
+    background: none;
+    background-color: $primary-color;
+    text-align: center;
+    &:hover {
+        color: $primary-color;
+        background-color: $secondary-color;
+        text-decoration: underline;
+        border: 1px solid $primary-color;
+    }
+}
+
+.btn_link {
+    font-family: NunitoRegular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $primary-color;
+    text-decoration: none;
+    text-align: center;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.text--main {
+    font-family: NunitoRegular;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: $secondary-color;
+}
+
+.link {
+    font-family: NunitoRegular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 133%;
+    letter-spacing: 0.02em;
+    text-decoration-line: underline;
+    color: $primary-color;
+}
+
+.title--small {
+    font-family: NunitoRegular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 160%;
+    text-decoration-line: underline;
+    color: $primary-color;
+}
+
+.text15 {
+    font-family: NunitoRegular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 160%;
+    color: $secondary-color;
+    opacity: 0.5;
+}
+
+.input_with-arrow {
+    position: relative;
+    &::after {
+        display: block;
+        content: '';
+        background-image: url('../images/arrow.png');
+        width: 12px;
+        height: 7px;
+        position: absolute;
+        right: 10px;
+        top: 20px;
+    }
+}
+
+.input {
+    font-family: NunitoRegular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 160%;
+    color: $primary-color;
+    opacity: 0.4;
+    border: 1px solid $primary-color;
+    padding-left: 15px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    height: 24px;
+}
+
+.personal-cabinet__title {
+    font-family: CormorantLight;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 132.5%;
+    letter-spacing: 0.04em;
+    color: #030303;
+    margin: 0;
+}
+
+.line {
+    width: 100%;
+    max-width: 1200px;
+    border: solid $primary-color 0.1px;
+    margin-top: 14px;
+    @include mobile {
+        margin-top: 16px;
+    }
+    @include tablet {
+        margin-top: 20px;
+    }
+    @include desktop {
+        margin-top: 30px;
+    }
+}
+
+select {
+    -webkit-appearance: none;
+}
+
+.btn {
+    .btn__link {
+        text-decoration: none;
+        color: $secondary-color;
+    }
+}
+
+.btn + .disactive{
+    .btn__link {
+        text-decoration: none;
+        color: $primary-color;
+    }
+}
+
+.btn:hover {
+    .btn__link {
+        color: $primary-color;
+    }
+}

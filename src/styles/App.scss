@@ -1,0 +1,43 @@
+@import "./reset.css";
+@import "./fonts.scss";
+@import "./elements.scss";
+@import "./header.scss";
+@import "./modal.scss";
+@import "./footer.scss";
+
+.App {
+  .wrapp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    .wrapper {
+      margin: 0;
+      @include desktop {
+        max-width: 100%;
+      }
+      .main-wrapper {
+        align-self: center;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 9px;
+        @include mobile {
+          width: 600px;
+          margin-top: 26px;
+        }
+        @include tablet {
+          width: 960px;
+          margin-top: 27px;
+        }
+        @include desktop {
+          width: 1200px;
+          margin-top: 33px;
+        }
+      }
+    }
+  }
+}
